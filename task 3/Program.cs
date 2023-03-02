@@ -48,9 +48,15 @@ int Size(int number)
 
 void PrintArray(int[] array)
 {
-    for (int i = 0; i < array.Length; i++)
+    bool start = true;
+    foreach (int item in array)
     {
-        System.Console.Write(array[i]);
+        if(item == 1)
+        {
+            start = false;
+        }
+        if(!start) System.Console.Write($"{item} ");
+        
     }
     System.Console.WriteLine();
 }
